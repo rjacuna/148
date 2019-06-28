@@ -1,0 +1,32 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-16.024519296136347,
+xmax=28.729055153822216,
+ymin=-7.481640106452326,
+ymax=18.295256346218615,
+xtick={-16,-14,...,28},
+ytick={-6,-4,...,18},]
+\clip(-16.024519296136347,-7.481640106452326) rectangle (28.729055153822216,18.295256346218615);
+\draw [line width=2pt] (0,0) -- (0,18.295256346218615);
+\begin{scriptsize}
+\draw [fill=wrwrwr] (0,0) circle (2.5pt);
+\draw[color=wrwrwr] (0.220447013946015,0.6117822859590156) node {$A$};
+\draw [fill=rvwvcq] (0,4) circle (2.5pt);
+\draw[color=rvwvcq] (0.220447013946015,4.62216752887738) node {$B$};
+\draw[color=black] (0.10420396342664213,1.8904558416721173) node {$f$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
